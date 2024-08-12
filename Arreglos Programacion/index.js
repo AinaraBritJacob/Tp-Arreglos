@@ -1,47 +1,52 @@
-//1)
-let jugadores= [ "Messi","Ronaldo", "Maradona","Neymar","Julian"];
-console.log(jugadores);
-//2)
-let puntajes=[];
+// 1)
+let jugadores = ["Lucia", "Lopez", "Caesar", "Jose", "Javier"];
+
+// 2) 
+let puntajes = [];
+
+
 for (let i = 0; i < jugadores.length; i++) {
+    let puntaje = parseInt(prompt(`Introduce el puntaje de ${jugadores[i]}:`), 10);
+    puntajes.push(puntaje);
+}
 
-    let puntajes=Number(prompt("Ingresa un puntaje"))
-    console.log(puntajes  +   jugadores [i])
-    
+// 3) 
+let puntajeMayor = Math.max(...puntajes);
+let indiceMayor = puntajes.indexOf(puntajeMayor);
+console.log(`El puntaje más alto es ${puntajeMayor} y corresponde a ${jugadores[indiceMayor]}.`);
+
+// 4) 
+let puntajeMenor = Math.min(...puntajes);
+let indiceMenor = puntajes.indexOf(puntajeMenor);
+console.log(`El puntaje más bajo es ${puntajeMenor} y corresponde a ${jugadores[indiceMenor]}.`);
+
+// 5) 
+let nuevoJugador = prompt("Introduce el nombre del nuevo jugador:");
+let nuevoPuntaje = parseInt(prompt(`Introduce el puntaje de ${nuevoJugador}:`), 10);
+jugadores.push(nuevoJugador);
+puntajes.push(nuevoPuntaje);
+
+// 6) 
+console.log(`Cantidad de puntajes guardados: ${puntajes.length}`);
+
+// 7)
+puntajes[puntajes.length - 2] = parseInt(prompt(`Introduce el nuevo puntaje para ${jugadores[jugadores.length - 2]}:`), 10);
+puntajes[puntajes.length - 1] = parseInt(prompt(`Introduce el nuevo puntaje para ${jugadores[jugadores.length - 1]}:`), 10);
+
+console.log("Los jugadores y sus puntajes actualizados son:");
+for (let i = 0; i < jugadores.length; i++) {
+    console.log(`${jugadores[i]}: ${puntajes[i]}`);
 }
 
 
 
-//1)
-let Jugadores = ["Lucia","Lopez","Caesar","Jose","Javier"]
 
-//2)
-for (let i = 1; i <= 5; i++) {
-    let nombre = prompt(`Introduce el nombre del jugador ${i}:`);
-    let puntaje = parseInt(prompt(`Introduce el puntaje de ${nombre}:`), 10);
-}
 
-let Puntajes = []
-jugadores.push({ nombre: nombre, puntaje: puntaje });
 
-//3)
 
-let PuntajeMayor = Puntajes[0]
-let jugadormayor = jugadores[0]
-for (let indice = 0; indice< Puntajes.length; indice = indice + 1) {
-    if(Puntajes[indice] > Cantidad){
-        Cantidad = Puntajes[indice]
-    }
-    
-}
-//4)
-console.log("El puntaje mas bajo fue" + Cantidad)
-//5)
-Jugadores.push(prompt("Ingrese nombre de jugador"))
-Puntajes.push(prompt("Ingrese puntaje de Jugador"))
-//6)
-console.log(`Cantidad de puntajes guardados: {jugadores.length}`);
-//7)
+
+
+
 
 
 
